@@ -1,6 +1,6 @@
 import { HttpException, HttpStatus } from '@nestjs/common';
-import { BUSINESS_ERROR_CODE } from '@reusable/const';
-import type { BusinessError } from '@reusable/types';
+import { BUSINESS_ERROR_CODE } from '@reus-able/const';
+import type { BusinessError } from '@reus-able/types';
 
 export class BusinessException extends HttpException {
   constructor(err: BusinessError | string) {

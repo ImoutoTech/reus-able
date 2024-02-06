@@ -9,7 +9,7 @@ import { FastifyRequest } from 'fastify';
 import { Observable } from 'rxjs';
 import { ConfigService } from '@nestjs/config';
 import { BusinessException } from '../exceptions';
-import { BUSINESS_ERROR_CODE } from '@reusable/const'
+import { BUSINESS_ERROR_CODE } from '@reus-able/const'
 import * as jwt from 'jsonwebtoken';
 import { HLOGGER_TOKEN, HLogger } from '../logger/logger.service';
 
