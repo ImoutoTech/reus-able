@@ -19,8 +19,8 @@ importers:
     specifiers:
       '@nestjs/common': ^10.3.1
       '@nestjs/config': ^3.1.1
-      '@reusable/const': workspace:*
-      '@reusable/types': workspace:*
+      '@reus-able/const': workspace:*
+      '@reus-able/types': workspace:*
       '@types/jsonwebtoken': ^9.0.5
       chalk: ^4.1.2
       dayjs: ^1.11.10
@@ -34,8 +34,8 @@ importers:
     dependencies:
       '@nestjs/common': 10.3.1_t5ugd4ivyx3777aelcsqi2fshq
       '@nestjs/config': 3.1.1_y3njpzroztktswdtmxwwu3wsry
-      '@reusable/const': link:../const
-      '@reusable/types': link:../types
+      '@reus-able/const': link:../const
+      '@reus-able/types': link:../types
       chalk: 4.1.2
       dayjs: 1.11.10
       fastify: 4.26.0
