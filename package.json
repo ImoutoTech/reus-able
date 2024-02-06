@@ -12,5 +12,8 @@
     "utils"
   ],
   "author": "youranreus (https://mitsuha.space)",
-  "license": "ISC"
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  }
 }
