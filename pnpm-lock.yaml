@@ -19,8 +19,8 @@ importers:
     specifiers:
       '@nestjs/common': ^10.3.1
       '@nestjs/config': ^3.1.1
-      '@reus-able/const': workspace:*
-      '@reus-able/types': workspace:*
+      '@reus-able/const': ^1.0.0
+      '@reus-able/types': ^1.0.0
       '@types/jsonwebtoken': ^9.0.5
       chalk: ^4.1.2
       dayjs: ^1.11.10

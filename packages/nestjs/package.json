@@ -1,6 +1,6 @@
 {
   "name": "@reus-able/nestjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.ts",
   "private": false,
@@ -17,8 +17,8 @@
   "dependencies": {
     "@nestjs/common": "^10.3.1",
     "@nestjs/config": "^3.1.1",
-    "@reus-able/const": "workspace:*",
-    "@reus-able/types": "workspace:*",
+    "@reus-able/const": "^1.0.0",
+    "@reus-able/types": "^1.0.0",
     "chalk": "^4.1.2",
     "dayjs": "^1.11.10",
     "fastify": "^4.26.0",
