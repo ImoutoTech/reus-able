@@ -1,0 +1,20 @@
+{
+  "name": "@reusable/types",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "shared",
+    "utils",
+    "types"
+  ],
+  "author": "youranreus (https://mitsuha.space)",
+  "license": "ISC",
+  "dependencies": {
+    "@nestjs/common": "^10.3.1",
+    "typescript": "^5.3.3"
+  }
+}

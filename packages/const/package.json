@@ -1,0 +1,21 @@
+{
+  "name": "@reusable/const",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "shared",
+    "utils",
+    "const"
+  ],
+  "author": "youranreus (https://mitsuha.space)",
+  "license": "ISC",
+  "dependencies": {
+    "reflect-metadata": "^0.2.1",
+    "rxjs": "^7.8.1",
+    "typescript": "^5.3.3"
+  }
+}

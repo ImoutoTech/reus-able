@@ -1,0 +1,34 @@
+{
+  "name": "@reusable/nestjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "shared",
+    "utils",
+    "nestjs"
+  ],
+  "author": "youranreus (https://mitsuha.space)",
+  "license": "ISC",
+  "dependencies": {
+    "@nestjs/common": "^10.3.1",
+    "@nestjs/config": "^3.1.1",
+    "@reusable/const": "workspace:*",
+    "@reusable/types": "workspace:*",
+    "chalk": "^4.1.2",
+    "dayjs": "^1.11.10",
+    "fastify": "^4.26.0",
+    "jsonwebtoken": "^9.0.2",
+    "reflect-metadata": "^0.2.1",
+    "rxjs": "^7.8.1",
+    "typescript": "^5.3.3",
+    "winston": "^3.11.0",
+    "winston-daily-rotate-file": "^4.7.1"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.5"
+  }
+}

@@ -1,0 +1,14 @@
+build
+node_modules
+coverage
+
+.cache
+!/.cache/
+/.cache/**
+!/.cache/.gitkeep
+
+.eslintcache
+*.tsbuildinfo
+
+.DS_Store
+Thumbs.db

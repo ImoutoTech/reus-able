@@ -1,0 +1,15 @@
+{
+  "name": "reusable",
+  "version": "1.0.0",
+  "description": "some shared utils for reus",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "shared",
+    "utils"
+  ],
+  "author": "youranreus (https://mitsuha.space)",
+  "license": "ISC"
+}
