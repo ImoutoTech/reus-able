@@ -1,6 +1,6 @@
 {
   "name": "@reus-able/nestjs",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "dist/index.js",
   "private": false,
@@ -17,6 +17,8 @@
   "dependencies": {
     "@nestjs/common": "^10.3.1",
     "@nestjs/config": "^3.1.1",
+    "@nestjs/core": "^10.3.1",
+    "@nestjs/platform-fastify": "^10.3.1",
     "@reus-able/const": "workspace:*",
     "@reus-able/types": "workspace:*",
     "@types/node": "^20.11.16",
@@ -24,14 +26,15 @@
     "dayjs": "^1.11.10",
     "fastify": "^4.26.0",
     "jsonwebtoken": "^9.0.2",
-    "reflect-metadata": "^0.2.1",
+    "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1",
     "typescript": "^5.3.3",
     "winston": "^3.11.0",
     "winston-daily-rotate-file": "^4.7.1"
   },
   "devDependencies": {
-    "@types/jsonwebtoken": "^9.0.5"
+    "@types/jsonwebtoken": "^9.0.5",
+    "tslib": "^2.6.2"
   },
   "publishConfig": {
     "access": "public"
