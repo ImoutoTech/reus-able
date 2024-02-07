@@ -13,7 +13,6 @@
     "incremental": true,
     "skipLibCheck": true,
     "noEmit": false,
-    "importHelpers": true,
     "isolatedModules": false,
     "strictNullChecks": false,
     "noImplicitAny": false,
