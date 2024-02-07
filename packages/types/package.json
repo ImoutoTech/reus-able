@@ -1,8 +1,7 @@
 {
   "name": "@reus-able/types",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
-  "type": "module",
   "main": "dist/index.js",
   "private": false,
   "scripts": {

@@ -12,10 +12,13 @@
     "baseUrl": "./",
     "incremental": true,
     "skipLibCheck": true,
+    "noEmit": false,
+    "isolatedModules": false,
     "strictNullChecks": false,
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
+    "moduleResolution": "node",
     "noFallthroughCasesInSwitch": false,
     "types": ["node"]
   }
