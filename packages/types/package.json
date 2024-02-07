@@ -1,12 +1,12 @@
 {
   "name": "@reus-able/types",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "type": "module",
   "main": "dist/index.js",
   "private": false,
   "scripts": {
-    "build": "tsc -b -v ./"
+    "build": "rm -rf ./dist && tsc"
   },
   "keywords": [
     "shared",
