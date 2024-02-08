@@ -3,6 +3,8 @@ export enum UserRole {
   USER = 1,
 }
 
+export type AuthRoleType = 'admin' | 'user' | 'refresh'
+
 export interface UserJwtPayload {
   email: string;
   role: UserRole;
