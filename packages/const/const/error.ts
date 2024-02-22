@@ -1,4 +1,4 @@
-export const enum BUSINESS_ERROR_CODE {
+export enum BUSINESS_ERROR_CODE {
   COMMON = 10001,
 
   INVALID_TOKEN = 20001,
