@@ -2,7 +2,6 @@ import {
   CanActivate,
   ExecutionContext,
   HttpStatus,
-  Inject,
   Injectable,
 } from '@nestjs/common';
 import { FastifyRequest } from 'fastify';
@@ -11,7 +10,7 @@ import { ConfigService } from '@nestjs/config';
 import { BUSINESS_ERROR_CODE } from '@reus-able/const';
 import * as jwt from 'jsonwebtoken';
 import { BusinessException } from '../exceptions';
-import { HLOGGER_TOKEN, HLogger } from '../logger';
+import { HLogger } from '../logger';
 import { Reflector } from '@nestjs/core';
 
 const parseHeaderToken = (request: FastifyRequest, logger: HLogger): string => {
@@ -47,14 +46,20 @@ const handleAuthError = (
 
 @Injectable()
 export class AuthGuard implements CanActivate {
-  @Inject(ConfigService)
-  private config: ConfigService;
+  // @Inject(ConfigService)
+  // private config: ConfigService;
 
-  @Inject(HLOGGER_TOKEN)
-  private logger: HLogger;
+  // @Inject(HLOGGER_TOKEN)
+  // private logger: HLogger;
 
-  @Inject(Reflector)
-  private reflector: Reflector;
+  // @Inject(Reflector)
+  // private reflector: Reflector;
+
+  public constructor(
+    private config: ConfigService,
+    private logger: HLogger,
+    private reflector: Reflector,
+  ) {}
 
   canActivate(
     context: ExecutionContext,

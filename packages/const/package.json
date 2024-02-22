@@ -1,12 +1,12 @@
 {
   "name": "@reus-able/const",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/index.js",
   "private": false,
   "type": "module",
   "scripts": {
-    "build": "tsc -b -v ./"
+    "build": "rm -rf ./dis && tsc -b"
   },
   "keywords": [
     "shared",
@@ -16,8 +16,6 @@
   "author": "youranreus (https://mitsuha.space)",
   "license": "ISC",
   "dependencies": {
-    "reflect-metadata": "^0.2.1",
-    "rxjs": "^7.8.1",
     "typescript": "^5.3.3"
   },
   "publishConfig": {
