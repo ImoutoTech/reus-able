@@ -1,14 +1,13 @@
 {
   "name": "@reus-able/const",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "dist/cjs/index.js",
-  "module": "dist/es/index.js",
-  "types": "dist/es/index.d.ts",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
   "private": false,
-  "type": "module",
   "scripts": {
-    "build": "rm -rf ./dist && tsc --project ./tsconfig.build.json && tsc --project ./tsconfig.build-es.json"
+    "build": "rm -rf ./dist && tsc -p ./tsconfig.build.json && tsc -p ./tsconfig.build-esm.json"
   },
   "keywords": [
     "shared",
