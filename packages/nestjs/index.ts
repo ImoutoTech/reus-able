@@ -5,3 +5,4 @@ export * from './common/logger';
 export * from './common/decorator';
 export * from './common/middleware';
 export * from './common/module';
+export * from './common/pipe';
