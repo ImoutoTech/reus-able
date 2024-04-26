@@ -1,12 +1,13 @@
 {
   "name": "@reus-able/const",
-  "version": "1.0.2",
+  "version": "1.0.7",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
   "private": false,
-  "type": "module",
   "scripts": {
-    "build": "tsc -b -v ./"
+    "build": "rm -rf ./dist && tsc -p ./tsconfig.build.json && tsc -p ./tsconfig.build-esm.json"
   },
   "keywords": [
     "shared",
@@ -16,8 +17,6 @@
   "author": "youranreus (https://mitsuha.space)",
   "license": "ISC",
   "dependencies": {
-    "reflect-metadata": "^0.2.1",
-    "rxjs": "^7.8.1",
     "typescript": "^5.3.3"
   },
   "publishConfig": {
