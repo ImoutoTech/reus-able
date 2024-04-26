@@ -10,8 +10,13 @@ export class FastifyCorsMiddleware implements NestMiddleware {
     const allowedOrigins = this.configService
       .get<string>('ALLOWED_ORIGIN', '')
       .split(',');
-    const allowedMethod = this.configService.get<string>('ALLOWED_METHOD', 'GET, POST, PUT, DELETE, PATCH')
+    const allowedMethod = this.configService.get<string>('ALLOWED_METHOD', 'GET, POST, PUT, DELETE, PATCH');
     const requestOrigin = req.headers.origin;
+
+    if (!requestOrigin) {
+      next();
+      return;
+    }
 
     if (allowedOrigins.includes(requestOrigin)) {
       res.setHeader('Access-Control-Allow-Origin', requestOrigin);
