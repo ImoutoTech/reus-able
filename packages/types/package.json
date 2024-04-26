@@ -15,7 +15,7 @@
   "author": "youranreus (https://mitsuha.space)",
   "license": "ISC",
   "dependencies": {
-    "@nestjs/common": "^10.3.1",
+    "@nestjs/common": "^10.3.6",
     "typescript": "^5.3.3"
   },
   "publishConfig": {
