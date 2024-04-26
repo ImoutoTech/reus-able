@@ -56,12 +56,6 @@ export class AuthGuard implements CanActivate {
   @Inject(Reflector)
   private reflector: Reflector;
 
-  // public constructor(
-  //   private config: ConfigService,
-  //   private logger: HLogger,
-  //   private reflector: Reflector,
-  // ) {}
-
   canActivate(
     context: ExecutionContext,
   ): boolean | Promise<boolean> | Observable<boolean> {
