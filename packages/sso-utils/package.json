@@ -1,6 +1,9 @@
 {
   "name": "@reus-able/sso-utils",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "1.0.0",
   "type": "module",
   "files": [
