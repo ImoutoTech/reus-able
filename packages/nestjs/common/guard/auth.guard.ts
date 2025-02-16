@@ -13,7 +13,7 @@ import { BusinessException } from '../exceptions';
 import { HLOGGER_TOKEN, HLogger } from '../module/logger';
 import { Reflector } from '@nestjs/core';
 import { UserJwtPayload, UserRole } from '@reus-able/types';
-import { PermissionService } from '@/common/module';
+import { PERMISSION_SERVICE_TOKEN, PermissionService } from '@/common/module';
 
 const parseHeaderToken = (request: FastifyRequest, logger: HLogger): string => {
   const authorization = request.headers.authorization || '';
@@ -51,7 +51,7 @@ export class AuthGuard implements CanActivate {
   @Inject(ConfigService)
   private config: ConfigService;
 
-  @Inject(PermissionService)
+  @Inject(PERMISSION_SERVICE_TOKEN)
   private permissionService: PermissionService;
 
   @Inject(HLOGGER_TOKEN)
