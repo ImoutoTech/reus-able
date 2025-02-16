@@ -10,4 +10,5 @@ export interface UserJwtPayload {
   role: UserRole;
   id: number;
   refresh: boolean;
+  roles: string[];
 }
