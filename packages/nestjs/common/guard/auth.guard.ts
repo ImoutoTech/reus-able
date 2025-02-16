@@ -68,7 +68,7 @@ export class AuthGuard implements CanActivate {
       'permissions',
       context.getHandler(),
     );
-    if (!requiredRoles || !requiredRoles.length || !requiredPermissions || !requiredPermissions.length) {
+    if ((!requiredRoles || !requiredRoles.length) && (!requiredPermissions || !requiredPermissions.length)) {
       return true;
     }
 
