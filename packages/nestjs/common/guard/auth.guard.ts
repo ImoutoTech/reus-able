@@ -63,11 +63,11 @@ export class AuthGuard implements CanActivate {
   async canActivate(
     context: ExecutionContext,
   ) {
-    const requiredRoles = this.reflector.get<string[]>('roles', context.getHandler());
+    const requiredRoles = this.reflector.get<string[]>('roles', context.getHandler()) || [];
     const requiredPermissions = this.reflector.get<string[]>(
       'permissions',
       context.getHandler(),
-    );
+    ) || [];
     if ((!requiredRoles || !requiredRoles.length) && (!requiredPermissions || !requiredPermissions.length)) {
       return true;
     }
@@ -82,12 +82,12 @@ export class AuthGuard implements CanActivate {
       ) as UserJwtPayload;
 
       // 检查 token 类型
-      if (info.refresh && !requiredRoles.includes('refresh')) {
+      if (info.refresh && !requiredRoles?.includes('refresh')) {
         this.logger.warn(`用户#${info.id}错误使用refresh token`);
         BusinessException.throw(BUSINESS_ERROR_CODE.INVALID_TOKEN, 'token错误');
       }
 
-      if (!info.refresh && requiredRoles.includes('refresh')) {
+      if (!info.refresh && requiredRoles?.includes('refresh')) {
         this.logger.warn(`用户#${info.id}没有使用refresh token`);
         BusinessException.throw(BUSINESS_ERROR_CODE.INVALID_TOKEN, 'token错误');
       }
@@ -95,7 +95,7 @@ export class AuthGuard implements CanActivate {
       // 当用户不是管理员时，检查角色和权限
       if (info.role !== UserRole.ADMIN) {
         // 检查权限
-        if (requiredPermissions.length > 0) {
+        if (requiredPermissions?.length > 0) {
           const permissions = await this.permissionService.getPermissionByRoles(info.roles);
           const hasPermission = requiredPermissions.some(permission => permissions.includes(permission));
           if (!hasPermission) {
@@ -104,7 +104,7 @@ export class AuthGuard implements CanActivate {
           }
         }
 
-        if (requiredRoles.includes('admin')) {
+        if (requiredRoles?.includes('admin')) {
           this.logger.warn(`用户#${info.id}尝试访问admin权限接口`);
           BusinessException.throwForbidden();
         }

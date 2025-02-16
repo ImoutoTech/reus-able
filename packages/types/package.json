@@ -2,7 +2,7 @@
   "name": "@reus-able/types",
   "version": "1.0.6",
   "description": "",
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
   "private": false,
   "scripts": {
     "build": "rm -rf ./dist && tsc"

@@ -2,9 +2,9 @@
   "name": "@reus-able/const",
   "version": "1.0.7",
   "description": "",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/esm/index.d.ts",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
   "private": false,
   "scripts": {
     "build": "rm -rf ./dist && tsc -p ./tsconfig.build.json && tsc -p ./tsconfig.build-esm.json"
