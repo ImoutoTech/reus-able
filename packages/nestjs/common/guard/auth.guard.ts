@@ -103,6 +103,11 @@ export class AuthGuard implements CanActivate {
             BusinessException.throwForbidden();
           }
         }
+
+        if (requiredRoles.includes('admin')) {
+          this.logger.warn(`用户#${info.id}尝试访问admin权限接口`);
+          BusinessException.throwForbidden();
+        }
       }
 
       request.user = info;
