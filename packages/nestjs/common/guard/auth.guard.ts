@@ -4,6 +4,7 @@ import {
   HttpStatus,
   Inject,
   Injectable,
+  Optional,
 } from '@nestjs/common';
 import { FastifyRequest } from 'fastify';
 import { ConfigService } from '@nestjs/config';
@@ -51,8 +52,9 @@ export class AuthGuard implements CanActivate {
   @Inject(ConfigService)
   private config: ConfigService;
 
+  @Optional()
   @Inject(PERMISSION_SERVICE_TOKEN)
-  private permissionService: PermissionService;
+  private permissionService?: PermissionService;
 
   @Inject(HLOGGER_TOKEN)
   private logger: HLogger;
@@ -106,6 +108,10 @@ export class AuthGuard implements CanActivate {
       if (info.role !== UserRole.ADMIN) {
         // 检查权限
         if (requiredPermissions?.length > 0) {
+          if (!this.permissionService) {
+            this.logger.warn(`用户#${info.id}需要权限检查，但PermissionService未配置`);
+            BusinessException.throwForbidden();
+          }
           const permissions = await this.permissionService.getPermissionByRoles(info.roles);
           const hasPermission = requiredPermissions.some(permission => permissions.includes(permission));
           if (!hasPermission) {
