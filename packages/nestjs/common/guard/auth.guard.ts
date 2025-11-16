@@ -68,14 +68,24 @@ export class AuthGuard implements CanActivate {
       'permissions',
       context.getHandler(),
     ) || [];
-    if ((!requiredRoles || !requiredRoles.length) && (!requiredPermissions || !requiredPermissions.length)) {
-      return true;
-    }
 
     const request = context.switchToHttp().getRequest();
-    const token = parseHeaderToken(request, this.logger);
+
+    if ((!requiredRoles || !requiredRoles.length) && (!requiredPermissions || !requiredPermissions.length)) {
+      try {
+        const token = parseHeaderToken(request, this.logger);
+        const info = jwt.verify(
+          token,
+          this.config.get<string>('TOKEN_SECRET', ''),
+        ) as UserJwtPayload;
+        request.user = info;
+      } catch (e) {}
+      return true;
+    }
+    
 
     try {
+      const token = parseHeaderToken(request, this.logger);
       const info = jwt.verify(
         token,
         this.config.get<string>('TOKEN_SECRET', ''),
