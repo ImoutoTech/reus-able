@@ -1,0 +1,20 @@
+{
+  "name": "@reus-able/theme",
+  "version": "1.0.0",
+  "description": "UI theme: design tokens and article typography for Applog",
+  "private": false,
+  "type": "module",
+  "files": ["src"],
+  "main": "./src/index.css",
+  "exports": {
+    ".": "./src/index.css",
+    "./tokens": "./src/tokens.css",
+    "./article": "./src/article-content.scss",
+    "./container": "./src/container.css",
+    "./cover-image": "./src/cover-image.scss"
+  },
+  "keywords": ["theme", "css", "typography", "applog"],
+  "author": "youranreus (https://mitsuha.space)",
+  "license": "ISC",
+  "publishConfig": { "access": "public" }
+}

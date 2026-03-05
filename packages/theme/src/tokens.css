@@ -1,0 +1,35 @@
+:root {
+  /* 主色 */
+  --color-link: #0071e3;
+  --color-link-hover: rgb(0, 102, 204);
+
+  /* 文本色 */
+  --color-text-primary: #1d1d1f;
+  --color-text-secondary: #6e6e73;
+
+  /* 背景色 */
+  --color-bg-base: #ffffff;
+  --color-bg-muted: #f5f5f7;
+  --color-bg-card: #e5e7eb;
+
+  /* 边框色 */
+  --color-border: #d2d2d7;
+  --color-divider: #e7e7e7;
+
+  /* 状态色 */
+  --color-error: #ff3b30;
+  --color-notice-bg: #eef7fc;
+  --color-warn-bg: #fdf2f1;
+
+  /* 代码块 */
+  --color-code-bg: #f5f5f7;
+  --color-code-block-bg: #0d1117;
+  --color-code-block-fallback-bg: #1d1d1f;
+
+  /* 字体栈 */
+  --font-family-base: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC",
+    "Hiragino Sans GB", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+    "Microsoft YaHei", "微软雅黑", sans-serif;
+  --font-family-mono: "SF Mono", "Monaco", "Inconsolata", "Fira Code",
+    "Droid Sans Mono", "Source Code Pro", monospace;
+}
